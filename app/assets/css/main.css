@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+/* habilita a variante `dark:` a partir da classe .dark no <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+  Identidade "Async Sistemas": base clara e neutra (grafite sobre branco),
+  com azul elétrico como acento — ecoando o brilho azul da logo.
+  Os tokens --color-paper/--color-ink são sobrescritos dentro de .dark
+  para virar o tema escuro sem precisar duplicar classes em todo componente.
+*/
+@theme {
+  --font-display: "Sora", ui-sans-serif, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* tema claro (padrão) */
+  --color-paper: #ffffff;
+  --color-surface: #f4f5f7;
+  --color-ink: #101114;
+  --color-line: rgb(16 17 20 / 0.1);
+
+  /* async (azul elétrico) — cor primária */
+  --color-async-50: #eef4ff;
+  --color-async-100: #d9e6ff;
+  --color-async-200: #b3ccff;
+  --color-async-300: #85aeff;
+  --color-async-400: #578fff;
+  --color-async-500: #2f6fed;
+  --color-async-600: #1f56c4;
+  --color-async-700: #17419a;
+  --color-async-800: #112f70;
+  --color-async-900: #0a1d47;
+  --color-async-950: #05102b;
+
+  /* grafite (metálico/prata) — cor secundária */
+  --color-grafite-50: #f7f7f8;
+  --color-grafite-100: #eaebed;
+  --color-grafite-200: #d3d5d9;
+  --color-grafite-300: #b3b7bd;
+  --color-grafite-400: #8d929b;
+  --color-grafite-500: #6c717a;
+  --color-grafite-600: #52565e;
+  --color-grafite-700: #3e4147;
+  --color-grafite-800: #2a2c31;
+  --color-grafite-900: #1a1b1e;
+  --color-grafite-950: #0e0f11;
+}
+
+/* tema escuro */
+.dark {
+  --color-paper: #08080a;
+  --color-surface: #0f1013;
+  --color-ink: #f3f4f6;
+  --color-line: rgb(243 244 246 / 0.12);
+}
+
+html {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* compensa a altura do header fixo ao rolar até uma seção com id (#contato, #modelos...) */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* brilho suave em arco, ecoando o traço azul da logo */
+.arc-glow {
+  background: radial-gradient(60% 60% at 50% 0%, var(--color-async-400) 0%, transparent 70%);
+  opacity: 0.18;
+  filter: blur(40px);
+}
+
+.dark .arc-glow {
+  opacity: 0.28;
+}
