@@ -20,7 +20,7 @@ const { whatsappUrl } = useLandingContent()
             Vamos abrir a vitrine da sua loja?
           </h2>
           <p class="mt-3 max-w-md text-white/70">
-            Manda uma mensagem contando qual é o seu comércio. A Async Sistemas responde
+            Entre em contato informando qual é o seu comércio. A Async Sistemas responde
             com os protótipos que mais combinam com o seu negócio.
           </p>
         </div>
