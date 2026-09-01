@@ -18,7 +18,7 @@ export interface Passo {
 }
 
 // TODO: trocar pelo número real da Async Sistemas (formato "55DDXXXXXXXXX").
-const WHATSAPP_NUMBER = '5500000000000'
+const WHATSAPP_NUMBER = '5531973228027'
 
 const navLinks: NavLink[] = [
   { label: 'Modelos', href: '#modelos' },
