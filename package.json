@@ -13,8 +13,11 @@
     "@nuxt/fonts": "^0.14.0",
     "@nuxt/ui": "^4.11.0",
     "@nuxtjs/color-mode": "^4.0.1",
+    "@nuxtjs/seo": "^5.3.14",
+    "@resvg/resvg-js": "^2.6.2",
     "gsap": "^3.15.0",
     "nuxt": "^4.5.2",
+    "satori": "^0.33.4",
     "vue": "^3.5.0",
     "vue-router": "^4.4.0"
   },

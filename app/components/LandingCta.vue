@@ -21,10 +21,10 @@ useScrollReveal(contentRef, { stagger: true, y: 20 })
         </span>
         <div>
           <h2 class="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
-            Vamos abrir a vitrine da sua loja?
+            Vamos abrir a vitrine do seu negócio?
           </h2>
           <p class="mt-3 max-w-md text-white/70">
-            Entre em contato informando qual é o seu comércio. A Async Sistemas responde
+            Entre em contato informando qual é o seu negócio. A Async Sistemas responde
             com os protótipos que mais combinam com o seu negócio.
           </p>
         </div>
