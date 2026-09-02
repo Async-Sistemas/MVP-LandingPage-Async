@@ -1,10 +1,14 @@
 <script setup lang="ts">
 const { whatsappUrl } = useLandingContent()
+
+// texto e botão entram em sequência ao rolar até a seção de contato
+const contentRef = ref<HTMLElement | null>(null)
+useScrollReveal(contentRef, { stagger: true, y: 20 })
 </script>
 
 <template>
   <section id="contato" class="bg-black py-14 text-white sm:py-20">
-    <div class="mx-auto flex max-w-6xl flex-col items-start gap-6 px-4 sm:gap-8 sm:px-6 md:flex-row md:items-center md:justify-between">
+    <div ref="contentRef" class="mx-auto flex max-w-6xl flex-col items-start gap-6 px-4 sm:gap-8 sm:px-6 md:flex-row md:items-center md:justify-between">
       <div class="flex items-start gap-5">
         <span
           class="mt-1 hidden h-16 w-16 flex-none items-center justify-center rounded-full border border-async-400/50 font-mono text-[10px] font-semibold uppercase tracking-widest text-async-300 sm:flex"

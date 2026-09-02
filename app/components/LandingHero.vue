@@ -1,5 +1,9 @@
 <script setup lang="ts">
 const { scrollToSection } = useSmoothScroll()
+
+// entrada em sequência do selo, título, parágrafo, botões e rodapé da hero
+const heroContentRef = ref<HTMLElement | null>(null)
+useScrollReveal(heroContentRef, { immediate: true, stagger: true, y: 20 })
 </script>
 
 <template>
@@ -8,7 +12,7 @@ const { scrollToSection } = useSmoothScroll()
     <div class="arc-glow pointer-events-none absolute inset-x-0 top-0 h-72" />
 
     <div class="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20 md:py-28">
-      <div class="max-w-2xl">
+      <div ref="heroContentRef" class="max-w-2xl">
         <span
           class="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1 font-mono text-xs uppercase tracking-widest text-async-600 dark:text-async-300"
         >

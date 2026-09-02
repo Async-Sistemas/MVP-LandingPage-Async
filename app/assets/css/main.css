@@ -56,11 +56,16 @@
   --color-line: rgb(243 244 246 / 0.12);
 }
 
+/*
+  Sem `scroll-behavior: smooth` aqui de propósito: o GSAP (ScrollToPlugin)
+  já anima o scroll das seções em useSmoothScroll.ts. Se o CSS também tentar
+  suavizar o mesmo scroll, os dois sistemas competem pelo scrollTop e o
+  resultado é um soluço/atraso perceptível antes do movimento começar.
+*/
 html {
   background-color: var(--color-paper);
   color: var(--color-ink);
   transition: background-color 0.2s ease, color 0.2s ease;
-  scroll-behavior: smooth;
 }
 
 body {

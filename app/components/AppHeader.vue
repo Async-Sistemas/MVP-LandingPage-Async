@@ -3,6 +3,10 @@ const colorMode = useColorMode()
 const { navLinks } = useLandingContent()
 const { scrollToSection } = useSmoothScroll()
 
+// leve fade + slide-down do cabeçalho ao carregar a página
+const headerRef = ref<HTMLElement | null>(null)
+useScrollReveal(headerRef, { immediate: true, y: -12 })
+
 const isDark = computed({
   get: () => colorMode.value === 'dark',
   set: (value: boolean) => {
@@ -22,7 +26,7 @@ function goToSection(href: string) {
 
 <template>
   <header class="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
+    <div ref="headerRef" class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
       <a href="#" class="flex items-center gap-3">
         <span class="flex h-10 w-10 flex-none items-center justify-center rounded-md bg-black p-1.5">
           <img src="/logo.png" alt="Async Sistemas" class="h-full w-full object-contain" />
