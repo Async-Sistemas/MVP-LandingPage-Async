@@ -21,14 +21,14 @@ useScrollReveal(heroContentRef, { immediate: true, stagger: true, y: 20 })
         </span>
 
         <h1 class="mt-6 font-display text-4xl font-semibold leading-[1.05] tracking-tight text-ink sm:text-5xl md:text-6xl">
-          Sua loja merece uma
+          Seu negócio merece uma
           <span class="text-async-500">vitrine</span>
           na internet.
         </h1>
 
         <p class="mt-6 max-w-lg text-base leading-relaxed text-ink/70 sm:text-lg">
           A Async Sistemas cria projetos e monta protótipos de página para todo tipo de comercios e etc. Escolha o que combina
-          com sua loja, personalize com sua marca e publique ainda essa semana.
+          com seu negócio, personalize com sua marca e publique ainda essa semana.
         </p>
 
         <!-- botões em coluna cheia no mobile (alvo de toque maior); lado a lado a partir de sm -->
