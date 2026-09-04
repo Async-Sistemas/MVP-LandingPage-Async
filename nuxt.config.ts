@@ -64,7 +64,9 @@ export default defineNuxtConfig({
         },
         // combina a cor da barra do navegador (mobile) com o tema ativo
         { name: 'theme-color', content: '#ffffff', media: '(prefers-color-scheme: light)' },
-        { name: 'theme-color', content: '#08080a', media: '(prefers-color-scheme: dark)' }
+        { name: 'theme-color', content: '#08080a', media: '(prefers-color-scheme: dark)' },
+        // confirma a propriedade do site no Google Search Console
+        { name: 'google-site-verification', content: 'w-4pjwxnWDdcbWpZdy6kya-tg_XQUNiYekOb_lewi50' }
       ],
       link: [{ rel: 'icon', type: 'image/png', href: '/logo.png' }]
     }
