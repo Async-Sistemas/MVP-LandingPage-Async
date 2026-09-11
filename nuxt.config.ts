@@ -11,9 +11,23 @@ export default defineNuxtConfig({
   // - @nuxtjs/seo        -> canonical, Open Graph, Twitter Card, sitemap.xml,
   //                         robots.txt e dados estruturados (schema.org), tudo
   //                         a partir da config `site`/`schemaOrg` abaixo
-  modules: ['@nuxt/ui', '@nuxt/fonts', '@nuxtjs/color-mode', '@nuxtjs/seo'],
+  // - @nuxt/scripts      -> carrega scripts de terceiros (Google Analytics)
+  //                         de forma otimizada, sem travar o carregamento
+  //                         inicial da página
+  modules: ['@nuxt/ui', '@nuxt/fonts', '@nuxtjs/color-mode', '@nuxtjs/seo', '@nuxt/scripts'],
 
   css: ['~/assets/css/main.css'],
+
+  // Google Analytics (GA4) — o @nuxt/scripts injeta o gtag.js de forma
+  // otimizada (só depois que a página termina de carregar) em vez do
+  // <script> tradicional, que atrasaria a primeira renderização.
+  scripts: {
+    registry: {
+      googleAnalytics: {
+        id: 'G-T178FR0XLW'
+      }
+    }
+  },
 
   // Dados centrais do site: usados pelo @nuxtjs/seo para montar a tag
   // canônica, og:url, og:site_name, sitemap.xml e robots.txt automaticamente.
