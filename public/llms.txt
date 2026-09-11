@@ -1,0 +1,25 @@
+# Async Sistemas
+
+> A Async Sistemas cria protótipos de landing page prontos para pequenos comércios (padarias, barbearias, floriculturas, petshops, cafeterias, salões de beleza). O cliente escolhe um modelo pronto, personaliza com a própria marca e publica a página em poucos dias — sem mensalidade para ver os modelos.
+
+Site: https://www.asyncsistemas.com.br
+Contato: via WhatsApp, link disponível na seção "Contato" do site
+
+## Como funciona
+
+- Escolha o modelo: o cliente vê os protótipos organizados por segmento de comércio e escolhe o que mais combina com o seu negócio.
+- Personalize com sua marca: o cliente envia fotos, cores e textos do negócio; a Async Sistemas ajusta o modelo escolhido para essa realidade.
+- Publique e comece a vender: a página vai ao ar com link próprio, pronta para compartilhar no WhatsApp e nas redes sociais.
+
+## Modelos disponíveis
+
+- Padaria do Bairro (padaria): cardápio do dia, encomendas de bolo e horário de funcionamento em destaque.
+- Barbearia Alfaiate (barbearia): galeria de cortes, tabela de preços e agendamento direto pelo WhatsApp.
+- Floricultura Jardim (floricultura): catálogo de buquês por ocasião e botão de entrega no mesmo dia.
+- Pet Amigo (petshop): serviços de banho e tosa, planos mensais e formulário de agendamento.
+- Cafeteria Esquina (cafeteria): menu de bebidas, ambiente em fotos e link para pedidos no delivery.
+- Salão Flor de Lis (salão de beleza): portfólio de trabalhos, pacotes de serviço e avaliações de clientes.
+
+## Páginas
+
+- [Página inicial](https://www.asyncsistemas.com.br/): apresenta os modelos disponíveis, explica como funciona o processo de personalização e traz o contato via WhatsApp.
