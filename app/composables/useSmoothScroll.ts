@@ -3,7 +3,7 @@
  * descontando a altura do header fixo.
  */
 export function useSmoothScroll() {
-  const scrollToSection = (target: string, offset = 80) => {
+  const scrollToSection = (target: string | number, offset = 80) => {
     if (!import.meta.client) return
 
     const { $gsap } = useNuxtApp()
