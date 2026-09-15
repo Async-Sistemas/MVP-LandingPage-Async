@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "mvp-landing-page-async.vercel.app" }],
+      "destination": "https://www.asyncsistemas.com.br/:path*",
+      "permanent": true
+    }
+  ]
+}

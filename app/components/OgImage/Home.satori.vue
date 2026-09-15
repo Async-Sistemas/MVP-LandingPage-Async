@@ -7,6 +7,13 @@ defineProps<{
   title: string
   description: string
 }>()
+
+// o Satori (renderizador desta imagem) às vezes roda sob demanda numa function
+// serverless isolada, sem contexto de navegador — nela, uma URL relativa como
+// "/logo.png" não é resolvível e a imagem falha ao carregar. Por isso montamos
+// a URL absoluta aqui em vez de usar um caminho relativo.
+const siteConfig = useSiteConfig()
+const logoUrl = `${siteConfig.url}/logo.png`
 </script>
 
 <template>
@@ -17,7 +24,7 @@ defineProps<{
     <!-- cabeçalho: logo + nome da marca, igual ao AppHeader do site -->
     <div class="flex items-center gap-4">
       <div class="flex h-16 w-16 items-center justify-center rounded-xl bg-white">
-        <img src="/logo.png" width="44" height="44" />
+        <img :src="logoUrl" width="44" height="44" />
       </div>
       <div class="flex text-3xl font-semibold text-white">
         Async<span class="font-normal text-[#8d929b]">Sistemas</span>
