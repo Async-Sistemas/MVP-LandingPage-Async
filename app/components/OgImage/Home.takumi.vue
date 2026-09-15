@@ -1,17 +1,19 @@
 <script setup lang="ts">
 // Imagem exibida quando o link do site é compartilhado (WhatsApp, Instagram,
-// LinkedIn etc.) — gerada em build time pelo nuxt-og-image, sem precisar de
-// nenhum arquivo de imagem pronto. Renderizada pelo Satori, que só entende um
-// subconjunto de CSS (flexbox), por isso o layout aqui é simples de propósito.
+// LinkedIn etc.) — gerada pelo nuxt-og-image, sem precisar de nenhum arquivo
+// de imagem pronto. Usa o renderizador Takumi (sufixo ".takumi.vue"): um
+// binário nativo único, mais rápido e mais confiável rodando em functions
+// serverless do que o Satori (que depende de várias libs WASM separadas —
+// yoga, opentype.js, harfbuzz —, e uma delas ficava de fora do pacote da
+// function na Vercel, quebrando a imagem em produção).
 defineProps<{
   title: string
   description: string
 }>()
 
-// o Satori (renderizador desta imagem) às vezes roda sob demanda numa function
-// serverless isolada, sem contexto de navegador — nela, uma URL relativa como
-// "/logo.png" não é resolvível e a imagem falha ao carregar. Por isso montamos
-// a URL absoluta aqui em vez de usar um caminho relativo.
+// quando essa imagem é gerada sob demanda numa function serverless isolada
+// (sem contexto de navegador), uma URL relativa como "/logo.png" não é
+// resolvível — por isso montamos a URL absoluta aqui.
 const siteConfig = useSiteConfig()
 const logoUrl = `${siteConfig.url}/logo.png`
 </script>
